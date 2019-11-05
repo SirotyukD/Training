@@ -1,0 +1,158 @@
+@import "vars"; //переменные, миксины
+// @import "fonts"; //шрифты
+@import "libs"; //reset.css
+@import "_mixins/global"; //container сетка
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #000;
+	background-image: url(../img/overlay.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 4491px;
+	opacity: 0.3;
+	z-index: 10;
+	display: none;
+}
+
+
+//Site
+
+.header {
+
+	height: 860px;
+	background-color: #e2e2e2;
+	background: url(../img/header-overlay.png),
+		url(../img/header-bg.png) no-repeat -200px top;
+	position: relative;
+
+	&__line {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 200px;
+		background: url(../img/header-line.png) no-repeat top center;
+	}
+
+	&__wrap {
+		display: flex;
+		width: 100%;
+	}
+
+	&__left {
+		width: 43%;
+		position: relative;
+		background-color: #000;
+	}
+
+	&__right {
+		width: 57%;
+	}
+
+	&__bulits {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 25px;
+	}
+
+	.bulit {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		&:last-child {
+			margin-right: 30px;
+		}
+
+		p {
+			color: $grey;
+			font-size: 1.6rem;
+			font-style: italic;
+			line-height: 18px;
+		}
+	}
+
+	.header__box {
+		padding-top: 55px;
+		max-width: 366px;
+	}
+
+	.header__title {
+		color: #383334;
+		font-weight: 900;
+		font-size: 4.4rem;
+		margin-bottom: 44px;
+
+		span {
+			font-size: 3.8rem;
+			font-weight: 700;
+			line-height: 38px
+		}
+	}
+
+	.header__title-word {
+		display: inline-block;
+		border-bottom: 5px solid $orange;
+
+		&:last-child {
+			border-bottom: 5px solid $green;
+		}
+	}
+
+	.box-lef__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+
+	.box-lef__item-elips {
+		display: block;
+		position: relative;
+		width: 60px;
+		height: 60px;
+		background-color: #e8edc9;
+		border-radius: 50%;
+		line-height: 60px;
+		color: #ffffff;
+		font-size: 2rem;
+		font-weight: 700;
+		text-align: center;
+		background: url(../img/header-elips.png) no-repeat center center,
+			#e8edc9;
+	}
+
+	.box-lef__item-text {
+		display: block;
+		max-width: 290px;
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 24px;
+
+		b,
+		strong {
+			color: #000;
+			font-weight: 500;
+		}
+
+		b {
+			display: inline-block;
+			border-bottom: 3px solid $orange;
+		}
+	}
+
+	.box-lef__item:last-child .box-lef__item-text b {
+		border-bottom: 3px solid $green;
+	}
+
+
+}
+
+@import "_mixins/modal"; //container сетка
+@import "media"; // Always at the end
