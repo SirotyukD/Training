@@ -17,16 +17,33 @@ body {
 $text: #444444;
 $orange: #ff6b00;
 $grey: #666666;
-$raleway-semi: 'Raleway',
-sans-serif;
-$raleway-bold: 'Raleway',
-sans-serif;
-
-
 
 
 //общие блоки, наследование и миксины
 
+@mixin circle-lg {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 49px;
+	height: 49px;
+	background: url(../img/title-circle-lg.png) no-repeat center center;
+	background-size: cover;
+}
+
+@mixin circle-sm {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	display: block;
+	width: 33px;
+	height: 31px;
+	background: url(../img/title-circle-sm.png) no-repeat center center;
+	background-size: cover;
+}
 
 .btn {
 	display: inline-block;
