@@ -24,18 +24,18 @@
 
 .header {
 
-	background: url(../img/header-overlay.png),
-	url(../img/header-bg.png) no-repeat -200px top;
+	background: url(../img/header-overlay.png) no-repeat center top,
+		url(../img/header-bg.png) no-repeat -200px top;
 	position: relative;
 	padding-bottom: 186px;
 
 	&__line {
 		position: absolute;
-		bottom: -8px;
+		bottom: 15px;
 		left: 0;
 		right: 0;
-		height: 200px;
-		background: url(../img/header-line.png) no-repeat top center;
+		height: 173px;
+		background: url(../img/sec-line-top.png) no-repeat top center;
 	}
 
 	&__wrap {
@@ -54,6 +54,7 @@
 		justify-content: flex-end;
 		margin-right: 90px;
 		margin-top: 31px;
+		cursor: pointer;
 
 		a {
 			display: inline-block;
@@ -100,7 +101,7 @@
 	&__micocin {
 		position: absolute;
 		top: 489px;
-    left: -102px;
+		left: -102px;
 		width: 660px;
 		height: 400px;
 		background: url(../img/header-micocin.png) no-repeat center center;
@@ -111,7 +112,7 @@
 	.header__micocin-price {
 		position: absolute;
 		top: 474px;
-    left: 246px;
+		left: 246px;
 		color: #ffffff;
 		font-size: 3.4rem;
 		font-weight: 900;
@@ -126,7 +127,7 @@
 	.header__micocin-price--green {
 		position: absolute;
 		top: 607px;
-    left: 349px;
+		left: 349px;
 		color: #ffffff;
 		font-size: 3.4rem;
 		font-weight: 900;
@@ -135,7 +136,7 @@
 		min-width: 100px;
 		height: 40px;
 		border-radius: 8px;
-		background: url(../img/micocin-rub.svg) no-repeat 70px center,#a8ca3f;
+		background: url(../img/micocin-rub.svg) no-repeat 70px center, #a8ca3f;
 	}
 
 
@@ -356,7 +357,20 @@
 				height: 26px;
 			}
 		}
+	}
 
+	.box-right__price-item--old {
+		.price-item__cost {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 10px;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: url(../img/header-form-olg.png) no-repeat top center;
+			}
+		}
 	}
 
 
@@ -455,6 +469,302 @@
 		background: url(../img/header-form-footer.svg) no-repeat 20px center, #eef2f7;
 	}
 
+}
+
+.infection {
+	padding-top: 86px;
+	padding-bottom: 110px;
+	position: relative;
+
+	&__text {
+		text-align: center;
+		color: #2b2828;
+		font-size: 2.4rem;
+		font-weight: 700;
+		margin-top: 36px;
+	}
+
+	&__disease {
+		margin-top: 47px;
+	}
+
+	.disease-item {
+		display: inline-block;
+		width: 335px;
+		max-width: 30%;
+		margin-right: 60px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.disease-item__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	.disease-item__img {
+		width: 170px;
+		height: 170px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.disease-item__numb {
+		position: absolute;
+		top: -4px;
+		left: 120px;
+		width: 50px;
+		height: 50px;
+		background-color: #ec9a6a;
+		border-radius: 50%;
+		text-align: center;
+		color: #ffffff;
+		font-size: 3rem;
+		line-height: 50px;
+	}
+
+	.disease-item__overlay {
+		position: absolute;
+		top: -18px;
+		left: -18px;
+		display: block;
+		width: 180px;
+		height: 120px;
+		background: url(../img/disease-item-overlay1.png) no-repeat center center;
+	}
+
+	.disease-item:nth-child(2) {
+		.disease-item__numb {
+			background-color: #e47643;
+		}
+
+		.disease-item__overlay {
+			background: url(../img/disease-item-overlay2.png) no-repeat center center;
+		}
+	}
+
+	.disease-item:nth-child(3) {
+		.disease-item__numb {
+			background-color: #ec5b19;
+		}
+
+		.disease-item__overlay {
+			background: url(../img/disease-item-overlay3.png) no-repeat center center;
+		}
+	}
+
+	.disease-item__title {
+		max-width: 148px;
+		margin-left: 19px;
+		color: #000000;
+		font-size: 2.2rem;
+		font-weight: 500;
+		line-height: 26px;
+	}
+
+	.disease-item__desc {
+		max-width: 305px;
+		line-height: 28px;
+		margin-top: 50px;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: -15px;
+			left: 0;
+			width: 50px;
+			height: 3px;
+			background-color: #becbd8;
+		}
+	}
+
+	&__statistic {
+		width: 100%;
+		max-width: 1170px;
+		min-height: 140px;
+		margin-top: 70px;
+		margin-bottom: 10px;
+		padding: 0 80px;
+		border: 3px solid #f4d3bb;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -20px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 170px;
+			height: 40px;
+			background: url(../img/infection-statistic-top.svg) no-repeat center center, #ffffff;
+		}
+
+		p {
+			text-align: center;
+			margin: 0 auto;
+			font-size: 22px;
+			line-height: 28px;
+
+			span {
+				color: #000000;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.descr {
+	background-color: #f1f9fb;
+	padding: 120px 0 80px;
+	text-align: center;
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 85px;
+	}
+
+	.descr-item {
+		width: 31%;
+		max-width: 395px;
+		padding: 80px 30px 35px 30px;
+		position: relative;
+		background: url(../img/descr-item-bg.svg) no-repeat top center;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: 80px;
+			height: 80px;
+			background: url(../img/descr-item-top1.svg) no-repeat center center;
+		}
+
+		&:nth-child(2) {
+			&::before {
+				background: url(../img/descr-item-top2.svg) no-repeat center center;
+			}
+		}
+
+		&:nth-child(3) {
+			&::before {
+				background: url(../img/descr-item-top3.svg) no-repeat center center;
+			}
+		}
+	}
+
+	.descr-item_title {
+		color: #000000;
+		font-size: 2.4rem;
+		font-weight: 700;
+		padding: 0 20px;
+	}
+
+	.descr-item__subtitle {
+		margin: 15px 0 45px 0;
+		color: #222222;
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 26px;
+
+		span {
+			color: $grey;
+			font-size: 1.6rem;
+			font-style: italic;
+			line-height: 28px;
+		}
+	}
+
+	.descr-item__overlay {
+		position: absolute;
+		top: 220px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 330px;
+		height: 12px;
+		background: url(../img/desc-item-overlay.svg) no-repeat top center;
+	}
+
+	.descr-item__but {
+		color: $orange;
+		font-size: 2.4rem;
+		font-weight: 900;
+	}
+
+	.descr-item__text {
+		margin-top: 19px;
+		line-height: 25px;
+
+		span {
+			color: #000000;
+			font-weight: 500;
+		}
+	}
+
+	.descr-item__result {
+		margin-top: 60px;
+		min-height: 137px;
+		border: 3px solid #f4d3bb;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		padding: 0 95px;
+		position: relative;
+
+		&::before {
+			content: 'ВЫВОД:';
+			position: absolute;
+			top: -16px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #000000;
+			font-size: 2.2rem;
+			font-weight: 700;
+			line-height: 28px;
+			width: 170px;
+			height: 55px;
+			z-index: 2;
+		}
+
+		&::after {
+			position: absolute;
+			content: '!';
+			top: -35px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 170px;
+			height: 55px;
+			color: #f4d3bb;
+			font-size: 70px;
+			font-weight: 700;
+			background-color: #f3f9ff;
+			z-index: 1;
+		}
+
+		p {
+			color: $text;
+			font-size: 2.1rem;
+			line-height: 28px;
+
+			span {
+				color: #000000;
+				font-weight: 500;
+			}
+		}
+	}
 }
 
 @import "_mixins/modal"; //container сетка

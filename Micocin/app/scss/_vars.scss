@@ -45,6 +45,37 @@ $grey: #666666;
 	background-size: cover;
 }
 
+.sec-title {
+	text-align: center;
+	color: #383334;
+	font-size: 4.8rem;
+	font-weight: 900;
+	line-height: 48px;
+	position: relative;
+	&::before{
+		@include circle-sm;
+		width: 35px;
+    height: 35px;
+    top: -49px;
+    left: 50.5%;
+	}
+	&::after{
+		@include circle-lg;
+		top: -76px;
+    left: 48%;
+		transform: translateX(-50%);
+	}
+}
+
+.sec-line-bott {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	right: 0;
+	height: 135px;
+	transform: rotateX(180deg);
+	background: url(../img/sec-line-top.png) no-repeat top center;
+}
 .btn {
 	display: inline-block;
 	background-color: $orange;
@@ -91,4 +122,3 @@ $grey: #666666;
 		transform: scale(100);
 	}
 }
-
