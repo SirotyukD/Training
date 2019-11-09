@@ -23,7 +23,9 @@ $(function () {
 		infinite: true,
 		speed: 500,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
+		nextArrow: '<img src="img/slider-next.svg" alt="next">',
+		prevArrow: '<div class="prev-arrow"></div>'
 	});
 
 
