@@ -266,7 +266,6 @@
 
 }
 
-
 .services {
 
 	margin-top: 140px;
@@ -492,7 +491,6 @@
 
 	&__subtitle {
 		margin-top: 25px;
-		position: relative;
 
 		&::after {
 			@include subtitle-bottom;
@@ -560,7 +558,7 @@
 
 	background: url(../img/testimonials-bg.jpg) no-repeat top center;
 	padding-top: 105px;
-	margin-top: 105px;
+	margin: 105px 0 268px 0;
 	text-align: center;
 	color: #fff;
 	max-height: 670px;
@@ -734,7 +732,129 @@
 		padding: 0 20px 15px 0;
 	}
 
+
+
 }
+
+.blog {
+	&__subtitle {
+		margin: 27px auto 22px;
+
+		&::after {
+			@include subtitle-bottom;
+			bottom: -10px;
+		}
+	}
+
+	&__posts {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 80px;
+	}
+
+	.post-active {
+		width: 52%;
+	}
+
+	.post-active__img {
+		position: relative;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.post-active__date {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		min-width: 110px;
+		padding: 8px;
+		background-color: #efa639;
+		border-radius: 3px;
+		color: #fefeff;
+	}
+
+	.post-active__title {
+		color: #535353;
+		font-family: $raleway-bold;
+		font-size: 2.2rem;
+		font-weight: 700;
+		margin: 25px 0;
+	}
+
+	.post-active__stat {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 190px;
+		color: $text;
+		font-size: 1.4rem;
+
+		i {
+			font-size: 1.3rem;
+			color: #f0a850;
+		}
+	}
+
+	.post-active__text {
+		margin: 17px 0;
+		color: #7e7d7d;
+		line-height: 24px;
+	}
+
+	.post-active__more a{
+		color: #313131;
+		font-family: $raleway-semi;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-weight: 700;
+	}
+
+	.post-box {
+		width: 48%;
+		padding-left: 60px;
+
+
+		.post {
+			padding: 40px 0 40px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid rgba(#cfcfcf, 0.7);
+			&:first-child{
+				padding-top: 0;
+			}
+			&:last-child{
+				border-bottom: none;
+			} 
+		}
+
+		.post-active__title{
+			margin-top: 0;
+		}
+
+		.post-active__text{
+			line-height: 1;
+		}
+
+		.post-active__inner{
+			margin-left: 30px;
+		}
+
+		.post-active__img {
+			min-width: 210px;
+			min-height: 200px;
+		}
+	}
+
+
+
+}
+
+
 
 
 
